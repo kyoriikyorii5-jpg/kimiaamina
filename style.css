@@ -1,0 +1,801 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==========================================================================
+   2. LOGO BRANDING
+   ========================================================================== */
+.phet-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.phet-p { color: #00a0e9; }
+.phet-h { color: #eb6100; }
+.phet-e { color: #e60012; }
+.phet-t { color: #009944; }
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION (DESKTOP)
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  height: 75px;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cu-logo {
+  border-left: 1px solid #ccc;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
+.cu-symbol {
+  font-weight: 900;
+  font-size: 20px;
+  color: #000;
+  line-height: 1;
+}
+
+.cu-text {
+  font-size: 10px;
+  color: #444;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #00a0e9;
+}
+
+.studio-spark {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  color: #e60012;
+  font-size: 12px;
+}
+
+.btn-donate-nav {
+  border: 1px solid #e52267;
+  color: #e52267;
+  padding: 6px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn-donate-nav:hover {
+  background-color: #e52267;
+  color: #ffffff;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.nav-icons i {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-icons i:hover {
+  color: #00a0e9;
+}
+
+/* ==========================================================================
+   4. MOBILE SIDEBAR & OVERLAY (HIDDEN ON DESKTOP)
+   ========================================================================== */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 2000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  z-index: 3000;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666666;
+  cursor: pointer;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.sidebar-links li a:active {
+  background-color: #f0f0f0;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #eeeeee;
+}
+
+.btn-donate-full {
+  display: block;
+  text-align: center;
+  background-color: #e52267;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   5. HERO BANNER
+   ========================================================================== */
+.hero {
+  position: relative;
+  height: 520px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+.btn-hero {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.btn-hero:hover {
+  background-color: #ffffff;
+  color: #111111;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. STAT BANNER
+   ========================================================================== */
+.banner-stat {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 25px 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.banner-stat h2 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #222222;
+}
+
+.banner-stat h2 strong {
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   7. SUBJECT CARDS SECTION
+   ========================================================================== */
+.subjects-section {
+  padding: 50px 20px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.subject-card {
+  border-radius: 40px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.subject-card .icon-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.subject-card .icon-box svg {
+  width: 70px;
+  height: 70px;
+}
+
+/* Kategori Warna Cards */
+.card-physics   { background-color: #fde2e4; }
+.card-math      { background-color: #fff1c5; }
+.card-chemistry { background-color: #e0f4f7; }
+.card-earth     { background-color: #d8f3dc; }
+.card-biology   { background-color: #ebd5e8; }
+
+/* ==========================================================================
+   8. TEACHING RESOURCES
+   ========================================================================== */
+.teaching-section {
+  position: relative;
+  height: 500px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.2)),
+    url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.teaching-content {
+  max-width: 500px;
+  margin-left: 8%;
+  padding: 20px;
+}
+
+.teaching-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.teaching-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ==========================================================================
+   9. INTERACT DISCOVER LEARN
+   ========================================================================== */
+.idl-section {
+  padding: 70px 20px 40px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.idl-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #5d2b7d;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.idl-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.stat-item h3 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 24px;
+  color: #444444;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.stat-icon {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 50px;
+  height: 50px;
+  stroke: #222222;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.about-text {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about-text a {
+  color: #555555;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   10. STEM ACCESSIBILITY
+   ========================================================================== */
+.stem-section {
+  position: relative;
+  height: 480px;
+  background-image: linear-gradient(to left, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.1)),
+    url('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.stem-content {
+  max-width: 480px;
+  margin-right: 8%;
+  text-align: right;
+  padding: 20px;
+}
+
+.stem-content h2 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.stem-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.btn-stem {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(0,0,0,0.2);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-stem:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* ==========================================================================
+   11. SPONSORS
+   ========================================================================== */
+.sponsor-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.sponsor-title {
+  font-size: 16px;
+  color: #888888;
+  margin-bottom: 15px;
+}
+
+.sponsor-logo {
+  font-size: 32px;
+  font-weight: 800;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.btn-donate-outline {
+  border: 1px solid #e52267;
+  color: #e52267;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+footer {
+  background-color: #42145f;
+  color: #ffffff;
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.8fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-col-brand .phet-logo {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.footer-col-brand p {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 25px;
+  max-width: 280px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-app {
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.mission-card {
+  background-color: #ffffff;
+  color: #222222;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.lang-select-box {
+  background: #ffffff;
+  color: #333333;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.google-translate-btn {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* ==========================================================================
+   13. MEDIA QUERIES (DESAIN RESPONSIF UNTUK TABLET & HP)
+   ========================================================================== */
+
+/* Tablet (Layar < 1024px) */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile / Smartphone (Layar < 768px) */
+@media (max-width: 768px) {
+  /* Tampilkan tombol hamburger & sembunyikan menu desktop */
+  .hamburger-btn {
+    display: block;
+  }
+  .nav-links, .cu-logo {
+    display: none;
+  }
+  header {
+    height: 60px;
+  }
+  .phet-logo {
+    font-size: 30px;
+  }
+
+  /* Penyesuaian Hero Section */
+  .hero {
+    height: 340px;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* Grid Kartu Subjek di HP (2 Kolom) */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .subject-card {
+    border-radius: 20px;
+    height: 160px;
+    padding: 20px 10px;
+  }
+  .subject-card h3 {
+    font-size: 13px;
+  }
+  .subject-card .icon-box svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Section Teks & Gambar */
+  .teaching-section, .stem-section {
+    height: auto;
+    padding: 50px 20px;
+    justify-content: center;
+  }
+  .teaching-content, .stem-content {
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .teaching-content h2, .stem-content h2 {
+    font-size: 26px;
+  }
+
+  /* Section Statistik */
+  .idl-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Layout Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-col-brand p {
+    max-width: 100%;
+  }
+  .app-buttons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
