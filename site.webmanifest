@@ -1,0 +1,18 @@
+{
+  "name": "Amina - =Aqmalgacor",
+  "short_name": "Amina",
+  "description": "Simulasi Interaktif Sains dan Matematika untuk Pembelajaran STEM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#090a10",
+  "theme_color": "#090a10",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

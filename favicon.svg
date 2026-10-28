@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aminaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16d9f5"/>
+      <stop offset="100%" stop-color="#9251ff"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Icon Badge -->
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="#090a10" stroke="url(#aminaGrad)" stroke-width="3"/>
+
+  <!-- Science Orbital Rings -->
+  <g transform="translate(50, 50)" filter="url(#glow)">
+    <!-- Diagonal Orbit 1 -->
+    <ellipse rx="36" ry="14" fill="none" stroke="url(#aminaGrad)" stroke-width="3" transform="rotate(-35)"/>
+    <!-- Diagonal Orbit 2 -->
+    <ellipse rx="36" ry="14" fill="none" stroke="url(#aminaGrad)" stroke-width="3" transform="rotate(35)"/>
+    <!-- Horizontal Orbit -->
+    <ellipse rx="36" ry="14" fill="none" stroke="url(#aminaGrad)" stroke-width="3" opacity="0.6"/>
+
+    <!-- Central Glowing Core (Atom / Amina 'A') -->
+    <circle r="8" fill="url(#aminaGrad)"/>
+
+    <!-- Orbiting Electrons -->
+    <circle cx="28" cy="-16" r="3.5" fill="#16d9f5"/>
+    <circle cx="-28" cy="16" r="3.5" fill="#9251ff"/>
+    <circle cx="0" cy="-14" r="3" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry Lab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      font-family:Roboto,sans-serif;
+      color:#f5f5f5;
+      min-height:100vh;
+      background-color:#090909;
+      background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),url("wallpaper-kimia.png");
+      background-size:cover,380px auto;
+      background-position:center,top left;
+      background-repeat:no-repeat,repeat;
+      background-attachment:fixed
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(8,8,8,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.12)
+    }
+
+    .navbar{
+      max-width:1250px;
+      margin:auto;
+      padding:18px 25px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center
+    }
+
+    .logo{font-size:28px;font-weight:900;letter-spacing:-1px}
+    .logo span{color:#bdbdbd}
+
+    .back-button{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:#eee;
+      font-size:14px;
+      font-weight:700;
+      padding:10px 16px;
+      border:1px solid #777;
+      border-radius:10px;
+      transition:.25s
+    }
+
+    .back-button:hover{background:#fff;color:#111}
+
+    .hero{
+      max-width:1250px;
+      margin:auto;
+      padding:82px 25px 62px
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 15px;
+      border:1px solid #777;
+      border-radius:30px;
+      background:rgba(255,255,255,.07);
+      color:#eee;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:2px;
+      margin-bottom:22px
+    }
+
+    .hero h1{
+      font-size:clamp(42px,7vw,76px);
+      line-height:1.1;
+      font-weight:900;
+      margin-bottom:22px
+    }
+
+    .hero h1 span{color:#c9c9c9}
+
+    .hero p{
+      max-width:700px;
+      font-size:16px;
+      line-height:1.9;
+      color:#d0d0d0;
+      margin-bottom:28px
+    }
+
+    .explore-button{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      padding:14px 23px;
+      border-radius:10px;
+      background:linear-gradient(100deg,#444,#aaa);
+      color:#fff;
+      font-weight:700;
+      transition:.25s
+    }
+
+    .explore-button:hover{
+      transform:translateY(-3px);
+      filter:brightness(1.15)
+    }
+
+    .section{
+      max-width:1250px;
+      margin:auto;
+      padding:25px 25px 85px
+    }
+
+    .section-heading{margin-bottom:30px}
+
+    .section-heading h2{
+      font-size:30px;
+      font-weight:900;
+      margin-bottom:10px
+    }
+
+    .section-heading p{
+      color:#c7c7c7;
+      line-height:1.7;
+      font-size:14px
+    }
+
+    .simulation-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px
+    }
+
+    .simulation-card{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      min-height:255px;
+      padding:27px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:18px;
+      background:rgba(12,12,12,.88);
+      box-shadow:0 12px 30px rgba(0,0,0,.2);
+      transition:transform .3s,border-color .3s
+    }
+
+    .simulation-card:hover{
+      transform:translateY(-6px);
+      border-color:#ddd
+    }
+
+    .simulation-icon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:rgba(255,255,255,.1);
+      color:#fff;
+      font-size:24px;
+      margin-bottom:22px
+    }
+
+    .simulation-card h3{
+      font-size:19px;
+      margin-bottom:12px
+    }
+
+    .simulation-card p{
+      flex:1;
+      font-size:14px;
+      color:#c9c9c9;
+      line-height:1.8;
+      margin-bottom:22px
+    }
+
+    .simulation-link{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:#eee;
+      font-weight:700;
+      font-size:13px
+    }
+
+    footer{
+      padding:27px 20px;
+      text-align:center;
+      background:rgba(7,7,7,.9);
+      border-top:1px solid rgba(255,255,255,.12);
+      color:#aaa;
+      font-size:13px
+    }
+
+    footer strong{color:#eee}
+
+    @media(max-width:900px){
+      .simulation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero{padding-top:65px}
+    }
+
+    @media(max-width:600px){
+      .navbar{padding:15px 18px}
+      .logo{font-size:24px}
+      .back-button{padding:9px 11px;font-size:12px}
+      .hero{padding:60px 20px 45px}
+      .hero h1{font-size:42px}
+      .section{padding:25px 20px 60px}
+      .simulation-grid{grid-template-columns:1fr}
+      .section-heading h2{font-size:25px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">CHEMISTRY<span>LAB</span></div>
+
+         <a href="index.html" class="back-button">
+      <i class="fa-solid fa-arrow-left"></i> Kembali
+    </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tag">
+      <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
+    </div>
+
+    <h1>Explore <span>Chemistry</span></h1>
+
+    <p>
+      Pelajari dunia kimia melalui model atom, molekul, reaksi kimia,
+      larutan, dan skala pH. Kenali sifat materi serta perubahan
+      zat melalui konsep pembelajaran kimia yang menarik.
+    </p>
+
+    <div class="explore-button">
+      Jelajahi Aktivitas
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+  </section>
+
+  <main class="section" id="simulations">
+
+    <div class="section-heading">
+      <h2>Chemistry Simulations</h2>
+      <p>Pilih topik kimia yang ingin kamu pelajari.</p>
+    </div>
+
+    <div class="simulation-grid">
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-atom"></i>
+        </div>
+        <h3>Build an Atom</h3>
+        <p>Susun proton, neutron, dan elektron untuk memahami struktur atom dan menentukan identitas suatu unsur.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-vial"></i>
+        </div>
+        <h3>Molecule Shapes</h3>
+        <p>Amati bentuk molekul dan hubungan antara pasangan elektron dengan geometri molekul.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-flask"></i>
+        </div>
+        <h3>Balancing Chemical Equations</h3>
+        <p>Pelajari cara menyeimbangkan persamaan reaksi berdasarkan hukum kekekalan jumlah atom.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
+        <h3>Acid-Base Solutions</h3>
+        <p>Eksplorasi sifat asam dan basa, konsentrasi larutan, serta hubungan konsentrasi dengan nilai pH.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-cubes-stacked"></i>
+        </div>
+        <h3>Molarity</h3>
+        <p>Pelajari molaritas dengan mengamati pengaruh jumlah zat terlarut dan volume larutan.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-atom"></i>
+        </div>
+        <h3>Browse Chemistry Sims</h3>
+        <p>Kenali konsep kimia lainnya, mulai dari struktur materi hingga reaksi dan sifat berbagai zat.</p>
+        <div class="simulation-link">
+          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <strong>CHEMISTRY LAB</strong> · Interactive Learning
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+# =====================================================================
+# Robots.txt for Amina - =Aqmalgacor
+# Optimized for Search Engines (Google, Bing) and AI Overview Crawlers
+# =====================================================================
+
+User-agent: *
+Allow: /
+
+# Izinkan Perayap AI Search & AI Overview untuk mengindeks materi edukasi
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Cegah bot spam/scraper agresif yang membebani server
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Lokasi Sitemap XML (Sesuaikan https://yourdomain.com dengan domain live Anda)
+Sitemap: https://yourdomain.com/sitemap.xml
