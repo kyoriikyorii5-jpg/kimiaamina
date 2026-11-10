@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physics Lab</title>
+  <title>Biology Lab</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -30,38 +30,30 @@
     header{
       position:sticky;
       top:0;
-      z-index:100;
-      background:rgba(8,8,8,.88);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,.12)
+      z-index:1000;
+      background:rgba(9,10,16,.92);
+      backdrop-filter:blur(15px);
+      border-bottom:1px solid rgba(255,255,255,.07)
     }
 
-    .navbar{
-      max-width:1250px;
+    .header-container{
+      max-width:1280px;
       margin:auto;
-      padding:18px 25px;
       display:flex;
       justify-content:space-between;
-      align-items:center
-    }
-
-    .logo{font-size:28px;font-weight:900;letter-spacing:-1px}
-    .logo span{color:#bdbdbd}
-
-    .back-button{
-      display:inline-flex;
       align-items:center;
-      gap:9px;
-      color:#eee;
-      font-size:14px;
-      font-weight:700;
-      padding:10px 16px;
-      border:1px solid #777;
-      border-radius:10px;
-      transition:.25s
+      padding:16px 24px
     }
 
-    .back-button:hover{background:#fff;color:#111}
+    .logo-section{display:flex;align-items:center;gap:12px}
+    .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
+    .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
+    .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
+    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a:hover{color:#16d9f5}
+    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
+    .donate-btn:hover{background:#8b35ff;color:#fff!important}
+    .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
       max-width:1250px;
@@ -187,17 +179,6 @@
       margin-bottom:22px
     }
 
-    .simulation-link{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-weight:700;
-      font-size:13px
-    }
-
-    .simulation-link:hover{color:#aaa}
-
     footer{
       padding:27px 20px;
       text-align:center;
@@ -215,14 +196,16 @@
     }
 
     @media(max-width:600px){
-      .navbar{padding:15px 18px}
-      .logo{font-size:24px}
-      .back-button{padding:9px 11px;font-size:12px}
       .hero{padding:60px 20px 45px}
       .hero h1{font-size:42px}
       .section{padding:25px 20px 60px}
       .simulation-grid{grid-template-columns:1fr}
       .section-heading h2{font-size:25px}
+    }
+
+    @media(max-width:768px){
+      .header-container{padding:14px 18px}
+      .nav-menu{display:none}
     }
   </style>
 </head>
@@ -230,13 +213,23 @@
 <body>
   
 <header>
-  <nav class="navbar">
-    <div class="logo">PHYSICS<span>LAB</span></div>
-
-    <a href="index.html" class="back-button">
-      <i class="fa-solid fa-arrow-left"></i> Kembali
+  <div class="header-container">
+    <a href="index.html" class="logo-section">
+      <div class="phet-logo">Amina</div>
+      <div class="cu-logo">Aqmalgacor</div>
     </a>
-  </nav>
+    <nav class="nav-menu">
+      <a href="index.html#simulations">Simulations</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#learn">About</a>
+      <a href="index.html#accessibility">Initiatives</a>
+      <a href="index.html#sponsors" class="donate-btn">Donate</a>
+    </nav>
+    <div class="nav-icons">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-user"></i>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
@@ -244,12 +237,17 @@
     <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
   </div>
 
-  <h1>Explore <span>Physics</span></h1>
+  <h1>Explore <span>Biology</span></h1>
 
   <p>
-    Pelajari berbagai konsep fisika mulai dari gaya dan gerak,
-    energi, gelombang, magnet, cahaya, hingga struktur atom
-    melalui aktivitas pembelajaran interaktif.
+    Pelajari kehidupan dan makhluk hidup melalui aktivitas interaktif.
+    Kenali sel, tubuh manusia, ekosistem, pewarisan sifat, serta
+    hubungan antara organisme dan lingkungannya.
+  </p>
+  <p>
+    Amati proses biologis, ajukan pertanyaan, lalu hubungkan hasil
+    pengamatan dengan konsep yang dipelajari. Pendekatan ini membantu
+    sains terasa dekat dengan kehidupan sehari-hari.
   </p>
 
   <div class="explore-button">
@@ -260,8 +258,9 @@
 
 <main class="section" id="simulations">
   <div class="section-heading">
-    <h2>Physics Simulations</h2>
-    <p>Pilih topik fisika yang ingin kamu pelajari.</p>
+    <h2>Biology Activities</h2>
+    <p>Pilih topik biologi yang ingin kamu pelajari.</p>
+    <p>Setiap aktivitas mengajakmu memahami bagaimana makhluk hidup tersusun, berfungsi, tumbuh, dan berinteraksi dengan lingkungannya.</p>
   </div>
 
   <div class="simulation-grid">
@@ -270,73 +269,61 @@
       <div class="simulation-icon">
         <i class="fa-solid fa-person-running"></i>
       </div>
-      <h3>Forces and Motion</h3>
-      <p>Pelajari gaya, gerak benda, dan bagaimana gaya memengaruhi pergerakan.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Cell Structure</h3>
+      <p>Kenali bagian-bagian sel seperti membran, inti, dan organel, serta pahami peran masing-masing dalam menjaga kehidupan sel.</p>
+      <p>Bandingkan sel tumbuhan dan sel hewan untuk melihat persamaan serta perbedaan struktur yang membantu keduanya menjalankan fungsi.</p>
     </article>
 
     <article class="simulation-card">
       <div class="simulation-icon">
         <i class="fa-solid fa-bolt"></i>
       </div>
-      <h3>Energy Skate Park</h3>
-      <p>Amati perubahan energi kinetik dan energi potensial saat benda bergerak di lintasan.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Human Body</h3>
+      <p>Pelajari bagaimana sistem pernapasan, peredaran darah, pencernaan, dan gerak bekerja untuk mendukung aktivitas tubuh.</p>
+      <p>Berbagai organ saling bekerja sama. Memahami hubungan tersebut membantu kita melihat tubuh sebagai satu kesatuan yang teratur.</p>
     </article>
 
     <article class="simulation-card">
       <div class="simulation-icon">
         <i class="fa-solid fa-water"></i>
       </div>
-      <h3>Wave on a String</h3>
-      <p>Eksplorasi gelombang, frekuensi, amplitudo, dan tegangan pada tali.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Ecosystems</h3>
+      <p>Amati hubungan antara produsen, konsumen, dan pengurai dalam suatu ekosistem serta aliran energi melalui rantai makanan.</p>
+      <p>Perubahan pada satu populasi dapat memengaruhi organisme lain. Keseimbangan ekosistem bergantung pada banyak hubungan tersebut.</p>
     </article>
 
     <article class="simulation-card">
       <div class="simulation-icon">
         <i class="fa-solid fa-magnet"></i>
       </div>
-      <h3>Magnets and Electromagnets</h3>
-      <p>Pelajari medan magnet, kutub magnet, dan hubungan antara listrik dan magnet.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Natural Selection</h3>
+      <p>Pelajari bagaimana variasi sifat dalam populasi dapat membantu organisme bertahan hidup dan berkembang biak di lingkungannya.</p>
+      <p>Adaptasi terbentuk melalui proses yang berlangsung lintas generasi, bukan perubahan yang terjadi seketika pada satu individu.</p>
     </article>
 
     <article class="simulation-card">
       <div class="simulation-icon">
         <i class="fa-solid fa-lightbulb"></i>
       </div>
-      <h3>Geometric Optics</h3>
-      <p>Eksplorasi pembiasan dan pemantulan cahaya serta cara kerja lensa dan cermin.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Photosynthesis</h3>
+      <p>Kenali cara tumbuhan menggunakan cahaya, air, dan karbon dioksida untuk menghasilkan makanan serta melepaskan oksigen.</p>
+      <p>Proses ini mendukung kehidupan di Bumi dan menjadi dasar bagi banyak rantai makanan di berbagai ekosistem.</p>
     </article>
 
     <article class="simulation-card">
       <div class="simulation-icon">
         <i class="fa-solid fa-atom"></i>
       </div>
-      <h3>Build an Atom</h3>
-      <p>Kenali proton, neutron, elektron, dan bagaimana partikel-partikel tersebut membentuk atom.</p>
-      <div class="simulation-link">
-        Buka Simulasi <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      <h3>Genetics</h3>
+      <p>Jelajahi informasi genetik dan pahami bagaimana sifat dapat diwariskan dari orang tua kepada keturunannya.</p>
+      <p>Perpaduan informasi genetik dan pengaruh lingkungan ikut membentuk keragaman ciri pada makhluk hidup.</p>
     </article>
 
   </div>
 </main>
 
 <footer>
-  <strong>PHYSICS LAB</strong> · Interactive Learning
+  <strong>BIOLOGY LAB</strong> · Interactive Learning
 </footer>
 
 </body>

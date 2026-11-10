@@ -25,47 +25,17 @@
       background-attachment:fixed
     }
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(8,8,8,.88);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,.12)
-    }
-
-    .navbar{
-      max-width:1250px;
-      margin:auto;
-      padding:18px 25px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:900;
-      letter-spacing:-1px
-    }
-
-    .logo span{color:#bdbdbd}
-
-    .back-button{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-size:14px;
-      font-weight:700;
-      padding:10px 16px;
-      border:1px solid #777;
-      border-radius:10px;
-      transition:.25s;
-      cursor:default
-    }
-
-    .back-button:hover{background:#fff;color:#111}
+    header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+    .logo-section{display:flex;align-items:center;gap:12px}
+    .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
+    .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
+    .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
+    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a:hover{color:#16d9f5}
+    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
+    .donate-btn:hover{background:#8b35ff;color:#fff!important}
+    .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
       max-width:1250px;
@@ -191,15 +161,6 @@
       margin-bottom:22px
     }
 
-    .simulation-link{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-weight:700;
-      font-size:13px
-    }
-
     footer{
       padding:27px 20px;
       text-align:center;
@@ -217,14 +178,16 @@
     }
 
     @media(max-width:600px){
-      .navbar{padding:15px 18px}
-      .logo{font-size:24px}
-      .back-button{padding:9px 11px;font-size:12px}
       .hero{padding:60px 20px 45px}
       .hero h1{font-size:42px}
       .section{padding:25px 20px 60px}
       .simulation-grid{grid-template-columns:1fr}
       .section-heading h2{font-size:25px}
+    }
+
+    @media(max-width:768px){
+      .header-container{padding:14px 18px}
+      .nav-menu{display:none}
     }
   </style>
 </head>
@@ -232,13 +195,23 @@
 <body>
 
   <header>
-    <nav class="navbar">
-      <div class="logo">MATH<span>LAB</span></div>
-       <a href="index.html" class="back-button">
-      <i class="fa-solid fa-arrow-left"></i> Kembali
-    </a>
+    <div class="header-container">
+      <a href="index.html" class="logo-section">
+        <div class="phet-logo">Amina</div>
+        <div class="cu-logo">Aqmalgacor</div>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html#simulations">Simulations</a>
+        <a href="index.html#teaching">Teaching</a>
+        <a href="index.html#learn">About</a>
+        <a href="index.html#accessibility">Initiatives</a>
+        <a href="index.html#sponsors" class="donate-btn">Donate</a>
+      </nav>
+      <div class="nav-icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-user"></i>
       </div>
-    </nav>
+    </div>
   </header>
 
   <section class="hero">
@@ -253,6 +226,12 @@
       Pelajari fungsi, aljabar, geometri, pecahan, grafik, dan pola
       untuk memahami konsep matematika dengan cara yang lebih menarik
       dan mudah dipahami.
+    </p>
+    <p>
+      Matematika bukan hanya tentang menghitung jawaban. Dengan
+      mencoba, membandingkan, dan menemukan pola, kamu dapat melihat
+      bagaimana ide matematika digunakan untuk menjelaskan masalah
+      dalam kehidupan sehari-hari.
     </p>
 
     <div class="explore-button">
@@ -270,6 +249,7 @@
         melatih kemampuan berhitung, dan memahami berbagai bentuk
         persamaan serta grafik.
       </p>
+      <p>Mulailah dari representasi visual, kemudian gunakan simbol dan perhitungan untuk menjelaskan hubungan yang kamu temukan.</p>
     </div>
 
     <div class="simulation-grid">
@@ -284,10 +264,7 @@
           dan mengamati perubahan kemiringan serta posisi garis
           pada bidang koordinat.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Perhatikan bagaimana perubahan gradien dan titik potong menggeser atau memutar garis, lalu hubungkan bentuknya dengan persamaan.</p>
       </article>
 
       <article class="simulation-card">
@@ -300,10 +277,7 @@
           dan amati hubungan antarvariabel melalui representasi
           grafik matematika.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Grafik membantu memperlihatkan pola yang sulit dikenali dari sekumpulan angka, termasuk titik perpotongan dan perubahan nilai.</p>
       </article>
 
       <article class="simulation-card">
@@ -316,10 +290,7 @@
           serta pelajari hubungan antara titik, garis, segitiga,
           dan bangun datar lainnya.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Dengan menggeser titik-titik pada gambar, kamu dapat menguji apakah suatu sifat geometri tetap berlaku dalam berbagai posisi.</p>
       </article>
 
       <article class="simulation-card">
@@ -332,10 +303,7 @@
           untuk menyelesaikan soal serta memahami berbagai
           permasalahan matematika.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Representasi yang berbeda dapat saling melengkapi: persamaan menunjukkan aturan, sedangkan grafik dan gambar memperjelas maknanya.</p>
       </article>
 
       <article class="simulation-card">
@@ -348,10 +316,7 @@
           pembilang dan penyebut, serta pahami hubungan antara
           pecahan dan bagian dari keseluruhan.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Bandingkan pecahan dengan penyebut berbeda menggunakan gambar atau garis bilangan sebelum mencoba menjumlahkan dan mengurangkannya.</p>
       </article>
 
       <article class="simulation-card">
@@ -364,10 +329,7 @@
           geometri, aritmetika, grafik fungsi, dan pemecahan masalah
           secara bertahap.
         </p>
-        <div class="simulation-link">
-          Buka Aktivitas
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Kerjakan langkah demi langkah, periksa kembali hasilnya, dan coba strategi lain untuk menemukan cara penyelesaian yang paling jelas.</p>
       </article>
 
     </div>

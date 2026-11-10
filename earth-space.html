@@ -25,41 +25,17 @@
       background-attachment:fixed
     }
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(8,8,8,.88);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,.12)
-    }
-
-    .navbar{
-      max-width:1250px;
-      margin:auto;
-      padding:18px 25px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center
-    }
-
-    .logo{font-size:28px;font-weight:900;letter-spacing:-1px}
-    .logo span{color:#bdbdbd}
-
-    .back-button{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-size:14px;
-      font-weight:700;
-      padding:10px 16px;
-      border:1px solid #777;
-      border-radius:10px;
-      transition:.25s
-    }
-
-    .back-button:hover{background:#fff;color:#111}
+    header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+    .logo-section{display:flex;align-items:center;gap:12px}
+    .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
+    .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
+    .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
+    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a:hover{color:#16d9f5}
+    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
+    .donate-btn:hover{background:#8b35ff;color:#fff!important}
+    .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
       max-width:1250px;
@@ -185,17 +161,6 @@
       margin-bottom:22px
     }
 
-    .simulation-link{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-weight:700;
-      font-size:13px
-    }
-
-    .simulation-link:hover{color:#aaa}
-
     footer{
       padding:27px 20px;
       text-align:center;
@@ -213,14 +178,16 @@
     }
 
     @media(max-width:600px){
-      .navbar{padding:15px 18px}
-      .logo{font-size:24px}
-      .back-button{padding:9px 11px;font-size:12px}
       .hero{padding:60px 20px 45px}
       .hero h1{font-size:42px}
       .section{padding:25px 20px 60px}
       .simulation-grid{grid-template-columns:1fr}
       .section-heading h2{font-size:25px}
+    }
+
+    @media(max-width:768px){
+      .header-container{padding:14px 18px}
+      .nav-menu{display:none}
     }
   </style>
 </head>
@@ -228,13 +195,23 @@
 <body>
 
   <header>
-    <nav class="navbar">
-      <div class="logo">EARTH<span>& SPACE</span></div>
-       <a href="index.html" class="back-button">
-      <i class="fa-solid fa-arrow-left"></i> Kembali
-    </a>
+    <div class="header-container">
+      <a href="index.html" class="logo-section">
+        <div class="phet-logo">Amina</div>
+        <div class="cu-logo">Aqmalgacor</div>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html#simulations">Simulations</a>
+        <a href="index.html#teaching">Teaching</a>
+        <a href="index.html#learn">About</a>
+        <a href="index.html#accessibility">Initiatives</a>
+        <a href="index.html#sponsors" class="donate-btn">Donate</a>
+      </nav>
+      <div class="nav-icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-user"></i>
       </div>
-    </nav>
+    </div>
   </header>
 
   <section class="hero">
@@ -249,6 +226,11 @@
       orbit, tata surya, perubahan musim, serta berbagai fenomena
       alam melalui konsep sains yang menarik.
     </p>
+    <p>
+      Mulailah dari lingkungan terdekat, lalu perluas pengamatan ke
+      planet dan benda langit. Setiap topik membantu menjelaskan
+      bagaimana sistem Bumi dan ruang angkasa saling berkaitan.
+    </p>
 
     <div class="explore-button">
       Jelajahi Aktivitas
@@ -261,6 +243,7 @@
     <div class="section-heading">
       <h2>Earth & Space Activities</h2>
       <p>Pilih aktivitas untuk menjelajahi Bumi dan luar angkasa.</p>
+      <p>Gunakan pertanyaan dan pengamatan untuk memahami pola alam, membandingkan fenomena, dan membangun penjelasan berdasarkan bukti.</p>
     </div>
 
     <div class="simulation-grid">
@@ -271,9 +254,7 @@
         </div>
         <h3>Gravity and Orbits</h3>
         <p>Amati bagaimana gravitasi memengaruhi pergerakan planet dan satelit dalam orbitnya.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Perubahan jarak dan kecepatan membantu menjelaskan bentuk lintasan benda langit serta alasan benda-benda tersebut tetap bergerak mengelilingi objek yang lebih besar.</p>
       </article>
 
       <article class="simulation-card">
@@ -282,9 +263,7 @@
         </div>
         <h3>My Solar System</h3>
         <p>Pelajari susunan tata surya dan eksplorasi pengaruh gravitasi terhadap gerak orbit planet.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Bandingkan ukuran, jarak, dan karakteristik planet untuk memahami bahwa anggota tata surya memiliki kondisi yang sangat beragam.</p>
       </article>
 
       <article class="simulation-card">
@@ -293,9 +272,7 @@
         </div>
         <h3>Seasons</h3>
         <p>Kenali hubungan kemiringan sumbu Bumi dan peredarannya mengelilingi Matahari dengan pergantian musim.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Perbedaan sudut datang cahaya Matahari dan lama siang-malam membuat setiap belahan Bumi menerima energi yang berbeda sepanjang tahun.</p>
       </article>
 
       <article class="simulation-card">
@@ -304,9 +281,7 @@
         </div>
         <h3>Earth Viewer</h3>
         <p>Jelajahi kondisi Bumi dan amati berbagai fenomena alam melalui visualisasi data sains.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Peta dan data pengamatan dapat digunakan untuk mengenali pola cuaca, bentang alam, serta perubahan yang berlangsung di berbagai wilayah.</p>
       </article>
 
       <article class="simulation-card">
@@ -315,9 +290,7 @@
         </div>
         <h3>Eyes on the Solar System</h3>
         <p>Kenali planet, benda langit, dan perjalanan misi antariksa melalui visualisasi tata surya tiga dimensi.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Visualisasi membantu membandingkan posisi dan pergerakan objek di ruang angkasa, sekaligus memperlihatkan luasnya jarak antaranggota tata surya.</p>
       </article>
 
       <article class="simulation-card">
@@ -326,9 +299,7 @@
         </div>
         <h3>NASA Space Place</h3>
         <p>Pelajari Bumi, Matahari, planet, dan ruang angkasa melalui penjelasan sains yang mudah dipahami.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <p>Rasa ingin tahu dapat dimulai dari pertanyaan sederhana tentang langit, lalu dikembangkan dengan membaca informasi dan memeriksa bukti ilmiah.</p>
       </article>
 
     </div>
