@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biology Lab</title>
+  <title>Latihan Soal - Amina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -18,47 +18,28 @@
       color:#f5f5f5;
       min-height:100vh;
       background-color:#090909;
-      background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),url("wallpaper-kimia.png");
+      background-image:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),url("wallpaper-kimia.png");
       background-size:cover,380px auto;
       background-position:center,top left;
       background-repeat:no-repeat,repeat;
       background-attachment:fixed
     }
 
-    a{text-decoration:none;color:inherit}
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(9,10,16,.92);
-      backdrop-filter:blur(15px);
-      border-bottom:1px solid rgba(255,255,255,.07)
-    }
-
-    .header-container{
-      max-width:1280px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:16px 24px
-    }
-
-    .logo-section{display:flex;align-items:center;gap:12px}
+    header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+    .logo-section{display:flex;align-items:center;gap:12px;text-decoration:none}
     .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
     .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
     .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
-    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a{color:#e8e8f0;transition:color .3s;text-decoration:none}
     .nav-menu a:hover{color:#16d9f5}
-    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
-    .donate-btn:hover{background:#8b35ff;color:#fff!important}
     .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
-      max-width:1250px;
+      max-width:1000px;
       margin:auto;
-      padding:82px 25px 62px
+      padding:82px 25px 42px;
+      text-align: center;
     }
 
     .tag{
@@ -77,106 +58,140 @@
     }
 
     .hero h1{
-      font-size:clamp(42px,7vw,76px);
-      line-height:1.1;
+      font-size:clamp(36px,5vw,56px);
+      line-height:1.2;
       font-weight:900;
-      margin-bottom:22px
+      margin-bottom:16px
     }
 
-    .hero h1 span{color:#c9c9c9}
+    .hero h1 span{color:#16d9f5}
 
     .hero p{
-      max-width:700px;
+      max-width:650px;
       font-size:16px;
       line-height:1.9;
       color:#d0d0d0;
-      margin-bottom:28px
-    }
-
-    .explore-button{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      padding:14px 23px;
-      border-radius:10px;
-      background:linear-gradient(100deg,#444,#aaa);
-      color:#fff;
-      font-weight:700;
-      transition:.25s
-    }
-
-    .explore-button:hover{
-      transform:translateY(-3px);
-      filter:brightness(1.15)
+      margin:0 auto 28px
     }
 
     .section{
-      max-width:1250px;
+      max-width:850px;
       margin:auto;
-      padding:25px 25px 85px
+      padding:10px 25px 85px
     }
 
-    .section-heading{margin-bottom:30px}
-
-    .section-heading h2{
-      font-size:30px;
-      font-weight:900;
-      margin-bottom:10px
-    }
-
-    .section-heading p{
-      color:#c7c7c7;
-      line-height:1.7;
-      font-size:14px
-    }
-
-    .simulation-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:22px
-    }
-
-    .simulation-card{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      min-height:255px;
-      padding:27px;
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:18px;
+    .question-card{
       background:rgba(12,12,12,.88);
-      box-shadow:0 12px 30px rgba(0,0,0,.2);
-      transition:transform .3s,border-color .3s
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:32px;
+      margin-bottom:24px;
+      box-shadow:0 12px 30px rgba(0,0,0,.3);
     }
 
-    .simulation-card:hover{
-      transform:translateY(-6px);
-      border-color:#ddd
+    .question-number {
+      font-size: 14px;
+      color: #16d9f5;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+      letter-spacing: 1px;
     }
 
-    .simulation-icon{
-      width:52px;
-      height:52px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      background:rgba(255,255,255,.1);
-      color:#fff;
-      font-size:24px;
-      margin-bottom:22px
+    .question-text {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #eaeaea;
+      margin-bottom: 20px;
     }
 
-    .simulation-card h3{
-      font-size:19px;
-      margin-bottom:12px
+    .formula-box {
+      background: rgba(255,255,255,0.06);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin: 10px 0;
+      border-left: 4px solid #16d9f5;
     }
 
-    .simulation-card p{
-      flex:1;
-      font-size:14px;
-      color:#c9c9c9;
-      line-height:1.8;
-      margin-bottom:22px
+    .options {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .options li {
+      background: rgba(255,255,255,.04);
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.05);
+      cursor: default;
+      display: flex;
+      gap: 12px;
+      line-height: 1.5;
+    }
+    
+    .options li span.opt-letter {
+      font-weight: bold;
+      color: #999;
+    }
+
+    details.pembahasan {
+      background: rgba(22, 217, 245, 0.05);
+      border: 1px solid rgba(22, 217, 245, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    details.pembahasan summary {
+      padding: 16px;
+      font-weight: 700;
+      color: #16d9f5;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      user-select: none;
+    }
+
+    details.pembahasan summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.pembahasan summary:hover {
+      background: rgba(22, 217, 245, 0.1);
+    }
+
+    .pembahasan-content {
+      padding: 0 16px 16px;
+      color: #ccc;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .pembahasan-content ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .pembahasan-content ul li {
+      margin-bottom: 8px;
+    }
+
+    .correct-badge {
+      display: inline-block;
+      background: #16d9f5;
+      color: #000;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 12px;
     }
 
     footer{
@@ -190,141 +205,143 @@
 
     footer strong{color:#eee}
 
-    @media(max-width:900px){
-      .simulation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .hero{padding-top:65px}
-    }
-
-    @media(max-width:600px){
-      .hero{padding:60px 20px 45px}
-      .hero h1{font-size:42px}
-      .section{padding:25px 20px 60px}
-      .simulation-grid{grid-template-columns:1fr}
-      .section-heading h2{font-size:25px}
-    }
-
     @media(max-width:768px){
       .header-container{padding:14px 18px}
       .nav-menu{display:none}
+      .hero h1{font-size:32px}
+      .question-card{padding: 24px 20px;}
     }
   </style>
 </head>
 
 <body>
-  
-<header>
-  <div class="header-container">
-    <a href="index.html" class="logo-section">
-      <div class="phet-logo">Amina</div>
-      <div class="cu-logo">Aqmalgacor</div>
-    </a>
-    <nav class="nav-menu">
-      <a href="index.html#simulations">Simulations</a>
-      <a href="index.html#teaching">Teaching</a>
-      <a href="index.html#learn">About</a>
-      <a href="index.html#accessibility">Initiatives</a>
-      <a href="index.html#sponsors" class="donate-btn">Donate</a>
-    </nav>
-    <div class="nav-icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <i class="fa-regular fa-user"></i>
+
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo-section">
+        <div class="phet-logo">Kimia</div>
+        <div class="cu-logo">Aqmalgacor</div>
+      </a>
+      <nav class="nav-menu">
+        <a href="#soal">Latihan Soal</a>
+        <a href="#">Materi</a>
+      </nav>
+      <div class="nav-icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-user"></i>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="tag">
-    <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
-  </div>
+  <section class="hero">
+    <div class="tag">
+      <i class="fa-solid fa-flask"></i> UJI PEMAHAMAN
+    </div>
+    <h1>Latihan Soal <span>Amina</span></h1>
+    <p>
+      Uji pemahamanmu tentang struktur, tata nama, dan sifat kimia senyawa amina. Kerjakan soal terlebih dahulu sebelum melihat kunci jawaban dan pembahasannya.
+    </p>
+  </section>
 
-  <h1>Explore <span>Biology</span></h1>
+  <main class="section" id="soal">
 
-  <p>
-    Pelajari kehidupan dan makhluk hidup melalui aktivitas interaktif.
-    Kenali sel, tubuh manusia, ekosistem, pewarisan sifat, serta
-    hubungan antara organisme dan lingkungannya.
-  </p>
-  <p>
-    Amati proses biologis, ajukan pertanyaan, lalu hubungkan hasil
-    pengamatan dengan konsep yang dipelajari. Pendekatan ini membantu
-    sains terasa dekat dengan kehidupan sehari-hari.
-  </p>
-
-  <div class="explore-button">
-    Jelajahi Aktivitas
-    <i class="fa-solid fa-arrow-down"></i>
-  </div>
-</section>
-
-<main class="section" id="simulations">
-  <div class="section-heading">
-    <h2>Biology Activities</h2>
-    <p>Pilih topik biologi yang ingin kamu pelajari.</p>
-    <p>Setiap aktivitas mengajakmu memahami bagaimana makhluk hidup tersusun, berfungsi, tumbuh, dan berinteraksi dengan lingkungannya.</p>
-  </div>
-
-  <div class="simulation-grid">
-
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-person-running"></i>
+    <!-- SOAL 1 -->
+    <div class="question-card">
+      <span class="question-number">SOAL 1</span>
+      <div class="question-text">
+        Perhatikan struktur senyawa amina berikut:
+        <br>
+        <div class="formula-box">
+          CH<sub>3</sub>−CH(CH<sub>3</sub>)−CH<sub>2</sub>−NH−CH<sub>3</sub>
+        </div>
+        <br>
+        Nama IUPAC yang benar untuk senyawa amina di atas adalah...
       </div>
-      <h3>Cell Structure</h3>
-      <p>Kenali bagian-bagian sel seperti membran, inti, dan organel, serta pahami peran masing-masing dalam menjaga kehidupan sel.</p>
-      <p>Bandingkan sel tumbuhan dan sel hewan untuk melihat persamaan serta perbedaan struktur yang membantu keduanya menjalankan fungsi.</p>
-    </article>
+      <ul class="options">
+        <li><span class="opt-letter">A.</span> 2-metilpropilmetilamina</li>
+        <li><span class="opt-letter">B.</span> N,2-dimetilpropan-1-amina</li>
+        <li><span class="opt-letter">C.</span> N-metil-2-metilpropan-1-amina</li>
+        <li><span class="opt-letter">D.</span> 1-(metilamino)-2-metilpropana</li>
+        <li><span class="opt-letter">E.</span> Isopropilmetilamina</li>
+      </ul>
 
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-bolt"></i>
+      <details class="pembahasan">
+        <summary><i class="fa-solid fa-key"></i> Lihat Kunci Jawaban & Pembahasan</summary>
+        <div class="pembahasan-content">
+          <ul>
+            <li><strong>Rantai utama:</strong> propana (3 atom C)</li>
+            <li><strong>Gugus metil pada C-2:</strong> &rarr; 2-metil</li>
+            <li><strong>Gugus metil terikat pada N:</strong> &rarr; N-metil</li>
+            <li><strong>Nama lengkap:</strong> N-metil-2-metilpropan-1-amina</li>
+          </ul>
+          <div class="correct-badge">Jawaban: C ✅</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- SOAL 2 -->
+    <div class="question-card">
+      <span class="question-number">SOAL 2</span>
+      <div class="question-text">
+        Suatu senyawa amina memiliki struktur di mana atom Nitrogen (N) mengikat dua gugus alkil dan satu atom Hidrogen, seperti pada struktur berikut:
+        <br>
+        <div class="formula-box">
+          CH<sub>3</sub>–NH–CH<sub>3</sub>
+        </div>
+        <br>
+        Berdasarkan jumlah gugus alkil yang terikat pada atom N, senyawa tersebut tergolong sebagai...
       </div>
-      <h3>Human Body</h3>
-      <p>Pelajari bagaimana sistem pernapasan, peredaran darah, pencernaan, dan gerak bekerja untuk mendukung aktivitas tubuh.</p>
-      <p>Berbagai organ saling bekerja sama. Memahami hubungan tersebut membantu kita melihat tubuh sebagai satu kesatuan yang teratur.</p>
-    </article>
+      <ul class="options">
+        <li><span class="opt-letter">A.</span> Amina primer</li>
+        <li><span class="opt-letter">B.</span> Amina sekunder</li>
+        <li><span class="opt-letter">C.</span> Amina tersier</li>
+        <li><span class="opt-letter">D.</span> Amida</li>
+        <li><span class="opt-letter">E.</span> Asam amino</li>
+      </ul>
 
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-water"></i>
+      <details class="pembahasan">
+        <summary><i class="fa-solid fa-key"></i> Lihat Kunci Jawaban & Pembahasan</summary>
+        <div class="pembahasan-content">
+          <ul>
+            <li><strong>Amina primer:</strong> N terikat 1 gugus alkil</li>
+            <li><strong>Amina sekunder:</strong> N terikat 2 gugus alkil</li>
+            <li><strong>Amina tersier:</strong> N terikat 3 gugus alkil</li>
+          </ul>
+          <p>Pada senyawa <strong>CH<sub>3</sub>–NH–CH<sub>3</sub></strong>, atom N mengikat 2 gugus metil (alkil), sehingga senyawa ini termasuk dalam golongan amina sekunder.</p>
+          <div class="correct-badge">Jawaban: B ✅</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- SOAL 3 -->
+    <div class="question-card">
+      <span class="question-number">SOAL 3</span>
+      <div class="question-text">
+        Senyawa amina memiliki sifat khas dalam reaksi kimia karena memiliki pasangan elektron bebas pada atom Nitrogen (N). Sifat kimia khas dari senyawa amina tersebut adalah bersifat...
       </div>
-      <h3>Ecosystems</h3>
-      <p>Amati hubungan antara produsen, konsumen, dan pengurai dalam suatu ekosistem serta aliran energi melalui rantai makanan.</p>
-      <p>Perubahan pada satu populasi dapat memengaruhi organisme lain. Keseimbangan ekosistem bergantung pada banyak hubungan tersebut.</p>
-    </article>
+      <ul class="options">
+        <li><span class="opt-letter">A.</span> Asam kuat</li>
+        <li><span class="opt-letter">B.</span> Asam lemah</li>
+        <li><span class="opt-letter">C.</span> Basa</li>
+        <li><span class="opt-letter">D.</span> Netral</li>
+        <li><span class="opt-letter">E.</span> Garam</li>
+      </ul>
 
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-magnet"></i>
-      </div>
-      <h3>Natural Selection</h3>
-      <p>Pelajari bagaimana variasi sifat dalam populasi dapat membantu organisme bertahan hidup dan berkembang biak di lingkungannya.</p>
-      <p>Adaptasi terbentuk melalui proses yang berlangsung lintas generasi, bukan perubahan yang terjadi seketika pada satu individu.</p>
-    </article>
+      <details class="pembahasan">
+        <summary><i class="fa-solid fa-key"></i> Lihat Kunci Jawaban & Pembahasan</summary>
+        <div class="pembahasan-content">
+          <p>Atom N pada golongan senyawa amina memiliki pasangan elektron bebas (PEB). Keberadaan PEB ini memungkinkan amina bertindak sebagai pendonor pasangan elektron atau dapat menerima proton (H⁺).</p>
+          <p>Menurut teori asam-basa Lewis dan Brønsted-Lowry, kemampuan menerima proton atau mendonorkan elektron bebas ini menjadikan amina bersifat <strong>basa</strong>.</p>
+          <div class="correct-badge">Jawaban: C ✅</div>
+        </div>
+      </details>
+    </div>
 
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-lightbulb"></i>
-      </div>
-      <h3>Photosynthesis</h3>
-      <p>Kenali cara tumbuhan menggunakan cahaya, air, dan karbon dioksida untuk menghasilkan makanan serta melepaskan oksigen.</p>
-      <p>Proses ini mendukung kehidupan di Bumi dan menjadi dasar bagi banyak rantai makanan di berbagai ekosistem.</p>
-    </article>
+  </main>
 
-    <article class="simulation-card">
-      <div class="simulation-icon">
-        <i class="fa-solid fa-atom"></i>
-      </div>
-      <h3>Genetics</h3>
-      <p>Jelajahi informasi genetik dan pahami bagaimana sifat dapat diwariskan dari orang tua kepada keturunannya.</p>
-      <p>Perpaduan informasi genetik dan pengaruh lingkungan ikut membentuk keragaman ciri pada makhluk hidup.</p>
-    </article>
-
-  </div>
-</main>
-
-<footer>
-  <strong>BIOLOGY LAB</strong> · Interactive Learning
-</footer>
+  <footer>
+    <strong>KIMIA ORGANIK</strong> · Latihan Soal Interaktif
+  </footer>
 
 </body>
 </html>

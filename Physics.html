@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physics Lab</title>
+  <title>Kimia Organik - Amina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
 
     header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
     .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
-    .logo-section{display:flex;align-items:center;gap:12px}
+    .logo-section{display:flex;align-items:center;gap:12px; text-decoration:none;}
     .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
     .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
     .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
-    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a{color:#e8e8f0;transition:color .3s; text-decoration: none;}
     .nav-menu a:hover{color:#16d9f5}
     .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
     .donate-btn:hover{background:#8b35ff;color:#fff!important}
@@ -65,7 +65,7 @@
       margin-bottom:22px
     }
 
-    .hero h1 span{color:#c9c9c9}
+    .hero h1 span{color:#16d9f5}
 
     .hero p{
       max-width:650px;
@@ -84,7 +84,9 @@
       background:linear-gradient(100deg,#444,#aaa);
       color:#fff;
       font-weight:700;
-      transition:.25s
+      transition:.25s;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .explore-button:hover{
@@ -133,7 +135,7 @@
 
     .simulation-card:hover{
       transform:translateY(-6px);
-      border-color:#ddd
+      border-color:#16d9f5
     }
 
     .simulation-icon{
@@ -143,7 +145,7 @@
       place-items:center;
       border-radius:14px;
       background:rgba(255,255,255,.1);
-      color:#fff;
+      color:#16d9f5;
       font-size:24px;
       margin-bottom:22px
     }
@@ -159,6 +161,17 @@
       color:#c9c9c9;
       line-height:1.8;
       margin-bottom:22px
+    }
+    
+    .formula {
+      background: rgba(255,255,255,0.1);
+      padding: 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #fff;
     }
 
     footer{
@@ -196,16 +209,13 @@
 
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo-section">
+      <a href="#" class="logo-section">
         <div class="phet-logo">Amina</div>
         <div class="cu-logo">Aqmalgacor</div>
       </a>
       <nav class="nav-menu">
-        <a href="index.html#simulations">Simulations</a>
-        <a href="index.html#teaching">Teaching</a>
-        <a href="index.html#learn">About</a>
-        <a href="index.html#accessibility">Initiatives</a>
-        <a href="index.html#sponsors" class="donate-btn">Donate</a>
+        <a href="#fisika">Sifat Fisika</a>
+        <a href="#kimia">Sifat Kimia</a>
       </nav>
       <div class="nav-icons">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -216,124 +226,116 @@
 
   <section class="hero">
     <div class="tag">
-      <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
+      <i class="fa-solid fa-flask"></i> KIMIA ORGANIK
     </div>
 
-    <h1>Explore <span>Physics</span></h1>
+    <h1>Senyawa <span>Amina</span></h1>
 
     <p>
-      Jelajahi dunia fisika melalui simulasi interaktif.
-      Pelajari gerak, gaya, energi, gelombang, listrik, magnet,
-      dan berbagai fenomena fisika untuk memahami konsep ilmiah
-      dengan cara yang menarik dan mudah dipahami.
+      Amina adalah senyawa organik turunan dari amonia (NH<sub>3</sub>) di mana satu atau lebih atom hidrogennya digantikan oleh gugus alkil atau aril.
     </p>
     <p>
-      Fisika membantu kita menjelaskan kejadian sehari-hari, dari
-      benda yang bergerak hingga cahaya yang dipantulkan. Cobalah
-      mengubah satu variabel dan amati bagaimana hasilnya berubah.
+      Senyawa ini memiliki karakteristik unik yang sangat dipengaruhi oleh keberadaan atom nitrogen dan pasangan elektron bebas (PEB). Berikut adalah rincian lengkap mengenai sifat fisika dan kimia dari amina.
     </p>
 
-    <div class="explore-button">
-      Jelajahi Simulasi
-      <i class="fa-solid fa-arrow-down"></i>
-    </div>
+    <a href="#fisika" style="text-decoration: none;">
+      <div class="explore-button">
+        Pelajari Sifat Amina
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </a>
   </section>
 
-  <main class="section" id="simulations">
-
+  <!-- SIFAT FISIKA SECTION -->
+  <main class="section" id="fisika">
     <div class="section-heading">
-      <h2>Physics Simulations</h2>
+      <h2>1. Sifat Fisika Amina</h2>
       <p>
-        Pilih topik fisika yang ingin kamu pelajari dan pahami
-        bagaimana hukum fisika bekerja dalam kehidupan sehari-hari.
+        Sifat fisik amina sangat dipengaruhi oleh kemampuan molekulnya untuk membentuk ikatan hidrogen serta panjang rantai karbonnya.
       </p>
-      <p>Gunakan simulasi untuk membuat prediksi, membandingkan hasil pengamatan, dan menarik kesimpulan berdasarkan hubungan antarbesaran.</p>
     </div>
 
     <div class="simulation-grid">
-
       <article class="simulation-card">
         <div class="simulation-icon">
-          <i class="fa-solid fa-person-running"></i>
+          <i class="fa-solid fa-wind"></i>
         </div>
-        <h3>Forces and Motion</h3>
+        <h3>Wujud Zat & Bau</h3>
         <p>
-          Pelajari gaya, kecepatan, percepatan, dan gerak benda.
-          Amati bagaimana besar serta arah gaya memengaruhi
-          pergerakan suatu objek.
+          Amina rantai pendek berupa gas/cairan mudah menguap dengan bau menyengat mirip amonia atau amis ikan. Rantai sedang berbentuk cair, dan rantai panjang berbentuk padat. Arilamina (anilin) cair tak berwarna tapi bisa gelap jika teroksidasi udara.
         </p>
-        <p>Bandingkan gerak dengan gaya yang berbeda untuk melihat kapan benda bertambah cepat, melambat, atau berubah arah.</p>
       </article>
 
       <article class="simulation-card">
         <div class="simulation-icon">
-          <i class="fa-solid fa-bolt"></i>
+          <i class="fa-solid fa-temperature-high"></i>
         </div>
-        <h3>Energy Skate Park</h3>
+        <h3>Titik Didih</h3>
         <p>
-          Amati perubahan energi kinetik dan energi potensial
-          ketika benda bergerak pada lintasan. Pelajari juga
-          pengaruh gesekan terhadap energi.
+          Lebih tinggi dari alkana ber-Mr sama berkat ikatan hidrogen, tapi lebih rendah dari alkohol karena ikatan N-H lebih lemah dari O-H. <br><br>
+          <strong>Urutan Titik Didih:</strong><br>
+          Amina Primer (1&deg;) > Sekunder (2&deg;) > Tersier (3&deg;). Amina tersier terendah karena tidak ada ikatan hidrogen antarmolekul.
         </p>
-        <p>Perhatikan bagaimana energi berpindah dan berubah bentuk, sementara gesekan dapat mengubah sebagian energi menjadi panas.</p>
       </article>
 
       <article class="simulation-card">
         <div class="simulation-icon">
-          <i class="fa-solid fa-water"></i>
+          <i class="fa-solid fa-droplet"></i>
         </div>
-        <h3>Wave on a String</h3>
+        <h3>Kelarutan dalam Air</h3>
         <p>
-          Eksplorasi gelombang pada tali dengan mengubah frekuensi,
-          amplitudo, dan tegangan untuk memahami karakteristik
-          serta perambatan gelombang.
+          Amina rantai pendek (< 6 atom karbon) sangat mudah larut dalam air karena gugus amino membentuk ikatan hidrogen dengan molekul air. Kelarutan menurun drastis seiring bertambah panjangnya rantai karbon yang bersifat hidrofobik (menolak air).
         </p>
-        <p>Amati jarak antarpuncak dan waktu getaran untuk menghubungkan panjang gelombang, frekuensi, dan cepat rambat.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- SIFAT KIMIA SECTION -->
+  <main class="section" id="kimia" style="padding-top: 0;">
+    <div class="section-heading">
+      <h2>2. Sifat Kimia Amina</h2>
+      <p>
+        Sifat kimia amina didominasi oleh keberadaan pasangan elektron bebas (PEB) pada atom nitrogennya.
+      </p>
+    </div>
+
+    <div class="simulation-grid">
+      <article class="simulation-card">
+        <div class="simulation-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3>Sifat Kebasaan</h3>
+        <p>
+          Bertindak sebagai basa lemah. Amina alifatik lebih basa dari amonia karena efek induktif positif alkil mendorong elektron ke Nitrogen. Sebaliknya, Amina aromatik (anilin) jauh lebih lemah basanya dari amonia karena PEB terdelokalisasi ke dalam cincin benzena.
+        </p>
       </article>
 
       <article class="simulation-card">
         <div class="simulation-icon">
-          <i class="fa-solid fa-magnet"></i>
+          <i class="fa-solid fa-flask-vial"></i>
         </div>
-        <h3>Magnets and Electromagnets</h3>
+        <h3>Pembentukan Garam</h3>
         <p>
-          Pelajari medan magnet, kutub magnet, dan hubungan antara
-          arus listrik dengan medan magnet pada elektromagnet.
+          Karena sifat basanya, amina bereaksi dengan asam kuat (seperti HCl atau H<sub>2</sub>SO<sub>4</sub>) untuk membentuk garam amonium yang larut dalam air dan tidak berbau.
+          <span class="formula">CH<sub>3</sub>NH<sub>2</sub> + HCl &rarr; CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>Cl<sup>-</sup></span>
         </p>
-        <p>Cobalah membalik arah arus atau mengubah jumlah lilitan untuk melihat pengaruhnya terhadap arah dan kekuatan medan magnet.</p>
-      </article>
-
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-lightbulb"></i>
-        </div>
-        <h3>Circuit Construction Kit</h3>
-        <p>
-          Susun baterai, kabel, sakelar, dan lampu untuk memahami
-          arus listrik, tegangan, hambatan, serta perbedaan
-          rangkaian seri dan paralel.
-        </p>
-        <p>Periksa jalur arus pada setiap susunan dan bandingkan apa yang terjadi ketika satu komponen dilepas dari rangkaian.</p>
       </article>
 
       <article class="simulation-card">
         <div class="simulation-icon">
           <i class="fa-solid fa-atom"></i>
         </div>
-        <h3>Browse Physics Sims</h3>
+        <h3>Alkilasi & Asilasi</h3>
         <p>
-          Kenali berbagai topik fisika lainnya, termasuk cahaya,
-          bunyi, tekanan, listrik, magnet, dan fenomena alam
-          melalui pembelajaran interaktif.
+          <strong>Alkilasi:</strong> Amina (nukleofil) bereaksi dengan alkil halida (mekanisme S<sub>N</sub>2) membentuk amina tingkat tinggi hingga garam amonium kuartener.<br><br>
+          <strong>Asilasi:</strong> Amina primer & sekunder bereaksi dengan klorida/anhidrida asam membentuk senyawa amida (Amina tersier tidak bisa).
         </p>
-        <p>Hubungkan konsep yang dipelajari dengan contoh nyata, lalu gunakan bukti pengamatan untuk menjelaskan mengapa suatu fenomena terjadi.</p>
       </article>
-
     </div>
   </main>
 
   <footer>
-    <strong>PHYSICS LAB</strong> · Interactive Learning
+    <strong>KIMIA ORGANIK</strong> · Karakteristik Senyawa Amina
   </footer>
 
 </body>

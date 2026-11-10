@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Earth & Space</title>
+  <title>Kimia - Penggunaan Amina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -18,23 +18,41 @@
       color:#f5f5f5;
       min-height:100vh;
       background-color:#090909;
-      background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),url("wallpaper-kimia.png");
+      background-image:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),url("wallpaper-kimia.png");
       background-size:cover,380px auto;
       background-position:center,top left;
       background-repeat:no-repeat,repeat;
       background-attachment:fixed
     }
 
-    header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
-    .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+    a{text-decoration:none;color:inherit}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(9,10,16,.92);
+      backdrop-filter:blur(15px);
+      border-bottom:1px solid rgba(255,255,255,.07)
+    }
+
+    .header-container{
+      max-width:1280px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 24px
+    }
+
     .logo-section{display:flex;align-items:center;gap:12px}
     .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
     .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
     .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
     .nav-menu a{color:#e8e8f0;transition:color .3s}
     .nav-menu a:hover{color:#16d9f5}
-    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
-    .donate-btn:hover{background:#8b35ff;color:#fff!important}
+    .donate-btn{border:1px solid #16d9f5;color:#bdf5ff!important;padding:8px 16px;border-radius:8px}
+    .donate-btn:hover{background:#16d9f5;color:#000!important}
     .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
@@ -65,7 +83,7 @@
       margin-bottom:22px
     }
 
-    .hero h1 span{color:#c9c9c9}
+    .hero h1 span{color:#16d9f5}
 
     .hero p{
       max-width:700px;
@@ -95,7 +113,7 @@
     .section{
       max-width:1250px;
       margin:auto;
-      padding:25px 25px 85px
+      padding:25px 25px 40px
     }
 
     .section-heading{margin-bottom:30px}
@@ -103,13 +121,14 @@
     .section-heading h2{
       font-size:30px;
       font-weight:900;
-      margin-bottom:10px
+      margin-bottom:10px;
+      color:#fff;
     }
 
     .section-heading p{
       color:#c7c7c7;
       line-height:1.7;
-      font-size:14px
+      font-size:15px
     }
 
     .simulation-grid{
@@ -122,7 +141,7 @@
       display:flex;
       flex-direction:column;
       align-items:flex-start;
-      min-height:255px;
+      min-height:220px;
       padding:27px;
       border:1px solid rgba(255,255,255,.18);
       border-radius:18px;
@@ -133,7 +152,7 @@
 
     .simulation-card:hover{
       transform:translateY(-6px);
-      border-color:#ddd
+      border-color:#16d9f5
     }
 
     .simulation-icon{
@@ -143,7 +162,7 @@
       place-items:center;
       border-radius:14px;
       background:rgba(255,255,255,.1);
-      color:#fff;
+      color:#16d9f5;
       font-size:24px;
       margin-bottom:22px
     }
@@ -158,7 +177,7 @@
       font-size:14px;
       color:#c9c9c9;
       line-height:1.8;
-      margin-bottom:22px
+      margin-bottom:10px
     }
 
     footer{
@@ -167,7 +186,8 @@
       background:rgba(7,7,7,.9);
       border-top:1px solid rgba(255,255,255,.12);
       color:#aaa;
-      font-size:13px
+      font-size:13px;
+      margin-top: 50px;
     }
 
     footer strong{color:#eee}
@@ -180,7 +200,7 @@
     @media(max-width:600px){
       .hero{padding:60px 20px 45px}
       .hero h1{font-size:42px}
-      .section{padding:25px 20px 60px}
+      .section{padding:25px 20px 40px}
       .simulation-grid{grid-template-columns:1fr}
       .section-heading h2{font-size:25px}
     }
@@ -193,121 +213,146 @@
 </head>
 
 <body>
-
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo-section">
-        <div class="phet-logo">Amina</div>
-        <div class="cu-logo">Aqmalgacor</div>
-      </a>
-      <nav class="nav-menu">
-        <a href="index.html#simulations">Simulations</a>
-        <a href="index.html#teaching">Teaching</a>
-        <a href="index.html#learn">About</a>
-        <a href="index.html#accessibility">Initiatives</a>
-        <a href="index.html#sponsors" class="donate-btn">Donate</a>
-      </nav>
-      <div class="nav-icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-regular fa-user"></i>
-      </div>
+  
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo-section">
+      <div class="phet-logo">Amina</div>
+      <div class="cu-logo">Aqmalgacor</div>
+    </a>
+    <nav class="nav-menu">
+      <a href="#farmasi">Bidang Farmasi</a>
+      <a href="#kosmetik">Produk Kosmetik</a>
+    </nav>
+    <div class="nav-icons">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-user"></i>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="tag">
-      <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
-    </div>
+<section class="hero">
+  <div class="tag">
+    <i class="fa-solid fa-flask"></i> APLIKASI KIMIA
+  </div>
 
-    <h1>Explore <span>Earth & Space</span></h1>
+  <h1>Penggunaan <span>Amina</span></h1>
 
-    <p>
-      Jelajahi planet Bumi dan alam semesta. Pelajari gravitasi,
-      orbit, tata surya, perubahan musim, serta berbagai fenomena
-      alam melalui konsep sains yang menarik.
-    </p>
-    <p>
-      Mulailah dari lingkungan terdekat, lalu perluas pengamatan ke
-      planet dan benda langit. Setiap topik membantu menjelaskan
-      bagaimana sistem Bumi dan ruang angkasa saling berkaitan.
-    </p>
+  <p>
+    Senyawa amina memiliki peranan yang sangat penting dalam kehidupan sehari-hari, terutama sebagai bahan dasar pembuatan produk farmasi, obat-obatan, serta formulasi kosmetik dan perawatan pribadi.
+  </p>
 
+  <a href="#farmasi">
     <div class="explore-button">
-      Jelajahi Aktivitas
+      Jelajahi Manfaatnya
       <i class="fa-solid fa-arrow-down"></i>
     </div>
-  </section>
+  </a>
+</section>
 
-  <main class="section" id="simulations">
+<!-- BAGIAN FARMASI -->
+<main class="section" id="farmasi">
+  <div class="section-heading">
+    <h2><i class="fa-solid fa-pills" style="color:#16d9f5; margin-right:8px;"></i> Bidang Farmasi</h2>
+    <p>Amina memiliki beragam kegunaan dalam industri farmasi untuk mengatasi berbagai masalah kesehatan.</p>
+  </div>
 
-    <div class="section-heading">
-      <h2>Earth & Space Activities</h2>
-      <p>Pilih aktivitas untuk menjelajahi Bumi dan luar angkasa.</p>
-      <p>Gunakan pertanyaan dan pengamatan untuk memahami pola alam, membandingkan fenomena, dan membangun penjelasan berdasarkan bukti.</p>
-    </div>
+  <div class="simulation-grid">
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-tablets"></i>
+      </div>
+      <h3>Obat Pereda Nyeri</h3>
+      <p>Banyak obat pereda nyeri dibuat dengan menggunakan amina. Obat penghilang rasa sakit umum seperti Demerol dan Morfin mengandung amina di dalamnya.</p>
+    </article>
 
-    <div class="simulation-grid">
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-tooth"></i>
+      </div>
+      <h3>Anestesi Lokal</h3>
+      <p>Senyawa amina seperti Novocain banyak digunakan sebagai obat anestesi (bius lokal), yang umumnya diaplikasikan oleh dokter gigi.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-earth-americas"></i>
-        </div>
-        <h3>Gravity and Orbits</h3>
-        <p>Amati bagaimana gravitasi memengaruhi pergerakan planet dan satelit dalam orbitnya.</p>
-        <p>Perubahan jarak dan kecepatan membantu menjelaskan bentuk lintasan benda langit serta alasan benda-benda tersebut tetap bergerak mengelilingi objek yang lebih besar.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-lungs"></i>
+      </div>
+      <h3>Dekongestan</h3>
+      <p>Senyawa turunan amina seperti Ephedra dimanfaatkan sebagai dekongestan untuk meredakan hidung tersumbat atau gangguan saluran pernapasan.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-sun"></i>
-        </div>
-        <h3>My Solar System</h3>
-        <p>Pelajari susunan tata surya dan eksplorasi pengaruh gravitasi terhadap gerak orbit planet.</p>
-        <p>Bandingkan ukuran, jarak, dan karakteristik planet untuk memahami bahwa anggota tata surya memiliki kondisi yang sangat beragam.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-shield-virus"></i>
+      </div>
+      <h3>Antihistamin</h3>
+      <p>Histamin dan Histidin adalah antihistamin umum berbahan dasar amina yang diberikan kepada pasien untuk meredakan gejala alergi.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-moon"></i>
-        </div>
-        <h3>Seasons</h3>
-        <p>Kenali hubungan kemiringan sumbu Bumi dan peredarannya mengelilingi Matahari dengan pergantian musim.</p>
-        <p>Perbedaan sudut datang cahaya Matahari dan lama siang-malam membuat setiap belahan Bumi menerima energi yang berbeda sepanjang tahun.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-brain"></i>
+      </div>
+      <h3>Neurotransmiter Utama</h3>
+      <p>Serotonin yang ada di dalam tubuh juga merupakan sebuah senyawa turunan amina yang bertindak sebagai neurotransmiter utama pada sistem saraf.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-globe"></i>
-        </div>
-        <h3>Earth Viewer</h3>
-        <p>Jelajahi kondisi Bumi dan amati berbagai fenomena alam melalui visualisasi data sains.</p>
-        <p>Peta dan data pengamatan dapat digunakan untuk mengenali pola cuaca, bentang alam, serta perubahan yang berlangsung di berbagai wilayah.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-prescription-bottle-medical"></i>
+      </div>
+      <h3>Obat Medis Lainnya</h3>
+      <p>Berbagai macam obat umum lainnya, seperti obat antidepresan amoxapine, juga diklasifikasikan sebagai senyawa turunan amina.</p>
+    </article>
+  </div>
+</main>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-satellite"></i>
-        </div>
-        <h3>Eyes on the Solar System</h3>
-        <p>Kenali planet, benda langit, dan perjalanan misi antariksa melalui visualisasi tata surya tiga dimensi.</p>
-        <p>Visualisasi membantu membandingkan posisi dan pergerakan objek di ruang angkasa, sekaligus memperlihatkan luasnya jarak antaranggota tata surya.</p>
-      </article>
+<!-- BAGIAN KOSMETIK -->
+<main class="section" id="kosmetik">
+  <div class="section-heading">
+    <h2><i class="fa-solid fa-bottle-droplet" style="color:#16d9f5; margin-right:8px;"></i> Kosmetik & Perawatan Pribadi</h2>
+    <p>Amina merupakan bahan penyusun esensial dalam formulasi kosmetik dan perawatan tubuh sehari-hari.</p>
+  </div>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <h3>NASA Space Place</h3>
-        <p>Pelajari Bumi, Matahari, planet, dan ruang angkasa melalui penjelasan sains yang mudah dipahami.</p>
-        <p>Rasa ingin tahu dapat dimulai dari pertanyaan sederhana tentang langit, lalu dikembangkan dengan membaca informasi dan memeriksa bukti ilmiah.</p>
-      </article>
+  <div class="simulation-grid">
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-pump-soap"></i>
+      </div>
+      <h3>Perawatan Harian</h3>
+      <p>Amina secara luas ditambahkan dan digunakan dalam berbagai produk perawatan pribadi harian, seperti sampo, kondisioner, sabun, dan losion tubuh.</p>
+    </article>
 
-    </div>
-  </main>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-soap"></i>
+      </div>
+      <h3>Surfaktan & Pengemulsi</h3>
+      <p>Berfungsi kuat sebagai surfaktan, pengemulsi, dan agen pembusa. Membantu membersihkan, merawat, dan mengunci kelembapan pada kulit dan rambut.</p>
+    </article>
 
-  <footer>
-    <strong>EARTH & SPACE</strong> · Interactive Learning
-  </footer>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-vial"></i>
+      </div>
+      <h3>Pengatur Kadar pH</h3>
+      <p>Bahan kimia amina spesifik, seperti Etanolamin, digunakan secara khusus untuk mengatur keseimbangan pH dan bertindak sebagai pengemulsi yang stabil.</p>
+    </article>
+
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-palette"></i>
+      </div>
+      <h3>Pewarna Rambut</h3>
+      <p>Senyawa amina yang terdapat di dalam pewarna rambut akan bereaksi secara kimia untuk membentuk pigmen warna yang kuat dan tahan lama.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <strong>KIMIA ORGANIK</strong> · Penggunaan Senyawa Amina
+</footer>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math Lab</title>
+  <title>Kimia - Gugus Fungsi Amina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -18,23 +18,41 @@
       color:#f5f5f5;
       min-height:100vh;
       background-color:#090909;
-      background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),url("wallpaper-kimia.png");
+      background-image:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),url("wallpaper-kimia.png");
       background-size:cover,380px auto;
       background-position:center,top left;
       background-repeat:no-repeat,repeat;
       background-attachment:fixed
     }
 
-    header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
-    .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+    a{text-decoration:none;color:inherit}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(9,10,16,.92);
+      backdrop-filter:blur(15px);
+      border-bottom:1px solid rgba(255,255,255,.07)
+    }
+
+    .header-container{
+      max-width:1280px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 24px
+    }
+
     .logo-section{display:flex;align-items:center;gap:12px}
     .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
     .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
     .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
     .nav-menu a{color:#e8e8f0;transition:color .3s}
     .nav-menu a:hover{color:#16d9f5}
-    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
-    .donate-btn:hover{background:#8b35ff;color:#fff!important}
+    .donate-btn{border:1px solid #16d9f5;color:#bdf5ff!important;padding:8px 16px;border-radius:8px}
+    .donate-btn:hover{background:#16d9f5;color:#000!important}
     .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
@@ -65,14 +83,14 @@
       margin-bottom:22px
     }
 
-    .hero h1 span{color:#c9c9c9}
+    .hero h1 span{color:#16d9f5}
 
     .hero p{
       max-width:700px;
       font-size:16px;
       line-height:1.9;
       color:#d0d0d0;
-      margin-bottom:28px
+      margin-bottom:15px
     }
 
     .explore-button{
@@ -84,7 +102,8 @@
       background:linear-gradient(100deg,#444,#aaa);
       color:#fff;
       font-weight:700;
-      transition:.25s
+      transition:.25s;
+      margin-top: 20px;
     }
 
     .explore-button:hover{
@@ -122,7 +141,7 @@
       display:flex;
       flex-direction:column;
       align-items:flex-start;
-      min-height:255px;
+      min-height:220px;
       padding:27px;
       border:1px solid rgba(255,255,255,.18);
       border-radius:18px;
@@ -133,7 +152,7 @@
 
     .simulation-card:hover{
       transform:translateY(-6px);
-      border-color:#ddd
+      border-color:#16d9f5
     }
 
     .simulation-icon{
@@ -143,7 +162,7 @@
       place-items:center;
       border-radius:14px;
       background:rgba(255,255,255,.1);
-      color:#fff;
+      color:#16d9f5;
       font-size:24px;
       margin-bottom:22px
     }
@@ -155,10 +174,10 @@
 
     .simulation-card p{
       flex:1;
-      font-size:14px;
+      font-size:15px;
       color:#c9c9c9;
       line-height:1.8;
-      margin-bottom:22px
+      margin-bottom:10px
     }
 
     footer{
@@ -193,151 +212,84 @@
 </head>
 
 <body>
-
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo-section">
-        <div class="phet-logo">Amina</div>
-        <div class="cu-logo">Aqmalgacor</div>
-      </a>
-      <nav class="nav-menu">
-        <a href="index.html#simulations">Simulations</a>
-        <a href="index.html#teaching">Teaching</a>
-        <a href="index.html#learn">About</a>
-        <a href="index.html#accessibility">Initiatives</a>
-        <a href="index.html#sponsors" class="donate-btn">Donate</a>
-      </nav>
-      <div class="nav-icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-regular fa-user"></i>
-      </div>
+  
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo-section">
+      <div class="phet-logo">Amina</div>
+      <div class="cu-logo">Aqmalgacor</div>
+    </a>
+    <nav class="nav-menu">
+      <a href="#jenis">Jenis Amina</a>
+      <a href="#">Materi</a>
+    </nav>
+    <div class="nav-icons">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-user"></i>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="tag">
-      <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
-    </div>
+<section class="hero">
+  <div class="tag">
+    <i class="fa-solid fa-flask"></i> KIMIA ORGANIK
+  </div>
 
-    <h1>Explore <span>Mathematics</span></h1>
+  <h1>Ciri Gugus Fungsi <span>Amina</span></h1>
 
-    <p>
-      Jelajahi dunia matematika melalui aktivitas interaktif.
-      Pelajari fungsi, aljabar, geometri, pecahan, grafik, dan pola
-      untuk memahami konsep matematika dengan cara yang lebih menarik
-      dan mudah dipahami.
-    </p>
-    <p>
-      Matematika bukan hanya tentang menghitung jawaban. Dengan
-      mencoba, membandingkan, dan menemukan pola, kamu dapat melihat
-      bagaimana ide matematika digunakan untuk menjelaskan masalah
-      dalam kehidupan sehari-hari.
-    </p>
+  <p>
+    Amina merupakan turunan senyawa dari amonia atau NH<sub>3</sub>, di mana hidrogennya akan digantikan dengan alkil.
+  </p>
+  <p>
+    Kalau kita lihat molekulnya, bentuk gugus fungsi amina diadakan (dibagi menjadi) 3 jenis berdasarkan jumlah atom karbon yang terikat secara langsung pada atom nitrogen, yaitu amina primer, amina sekunder, dan amina tersier.
+  </p>
 
+  <a href="#jenis">
     <div class="explore-button">
-      Jelajahi Aktivitas
+      Lihat Jenis Amina
       <i class="fa-solid fa-arrow-down"></i>
     </div>
-  </section>
+  </a>
+</section>
 
-  <main class="section" id="simulations">
+<main class="section" id="jenis">
+  <div class="section-heading">
+    <h2>3 Jenis Senyawa Amina</h2>
+    <p>Penggolongan senyawa amina didasarkan pada jumlah atom Karbon (C) yang berikatan langsung dengan atom Nitrogen (N).</p>
+  </div>
 
-    <div class="section-heading">
-      <h2>Math Activities</h2>
-      <p>
-        Pilih aktivitas matematika untuk mengeksplorasi konsep,
-        melatih kemampuan berhitung, dan memahami berbagai bentuk
-        persamaan serta grafik.
-      </p>
-      <p>Mulailah dari representasi visual, kemudian gunakan simbol dan perhitungan untuk menjelaskan hubungan yang kamu temukan.</p>
-    </div>
+  <div class="simulation-grid">
 
-    <div class="simulation-grid">
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-1"></i>
+      </div>
+      <h3>Amina Primer</h3>
+      <p>Amina primer adalah senyawa amina yang terbentuk ketika atom Nitrogen (N) berikatan langsung dengan <strong>1 atom Karbon (C)</strong> atau satu gugus alkil.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-square-root-variable"></i>
-        </div>
-        <h3>Graphing Lines</h3>
-        <p>
-          Pelajari persamaan garis dengan mengubah nilai persamaan
-          dan mengamati perubahan kemiringan serta posisi garis
-          pada bidang koordinat.
-        </p>
-        <p>Perhatikan bagaimana perubahan gradien dan titik potong menggeser atau memutar garis, lalu hubungkan bentuknya dengan persamaan.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-2"></i>
+      </div>
+      <h3>Amina Sekunder</h3>
+      <p>Amina sekunder adalah senyawa amina yang terjadi ketika atom Nitrogen (N) berikatan secara langsung dengan <strong>2 atom Karbon (C)</strong> atau dua gugus alkil.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <h3>Desmos Graphing Calculator</h3>
-        <p>
-          Eksplorasi grafik fungsi, bandingkan beberapa persamaan,
-          dan amati hubungan antarvariabel melalui representasi
-          grafik matematika.
-        </p>
-        <p>Grafik membantu memperlihatkan pola yang sulit dikenali dari sekumpulan angka, termasuk titik perpotongan dan perubahan nilai.</p>
-      </article>
+    <article class="simulation-card">
+      <div class="simulation-icon">
+        <i class="fa-solid fa-3"></i>
+      </div>
+      <h3>Amina Tersier</h3>
+      <p>Amina tersier adalah senyawa amina yang terbentuk apabila atom Nitrogen (N) berikatan secara langsung dengan <strong>3 atom Karbon (C)</strong> atau tiga gugus alkil sekaligus.</p>
+    </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-shapes"></i>
-        </div>
-        <h3>GeoGebra Geometry</h3>
-        <p>
-          Bangun berbagai bentuk geometri, ukur sudut dan panjang,
-          serta pelajari hubungan antara titik, garis, segitiga,
-          dan bangun datar lainnya.
-        </p>
-        <p>Dengan menggeser titik-titik pada gambar, kamu dapat menguji apakah suatu sifat geometri tetap berlaku dalam berbagai posisi.</p>
-      </article>
+  </div>
+</main>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-calculator"></i>
-        </div>
-        <h3>GeoGebra Calculator Suite</h3>
-        <p>
-          Gunakan konsep aljabar, grafik, geometri, dan perhitungan
-          untuk menyelesaikan soal serta memahami berbagai
-          permasalahan matematika.
-        </p>
-        <p>Representasi yang berbeda dapat saling melengkapi: persamaan menunjukkan aturan, sedangkan grafik dan gambar memperjelas maknanya.</p>
-      </article>
-
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-divide"></i>
-        </div>
-        <h3>Fractions</h3>
-        <p>
-          Pelajari pecahan melalui representasi visual, kenali
-          pembilang dan penyebut, serta pahami hubungan antara
-          pecahan dan bagian dari keseluruhan.
-        </p>
-        <p>Bandingkan pecahan dengan penyebut berbeda menggunakan gambar atau garis bilangan sebelum mencoba menjumlahkan dan mengurangkannya.</p>
-      </article>
-
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-shapes"></i>
-        </div>
-        <h3>Browse Math Tools</h3>
-        <p>
-          Kenali beragam konsep matematika melalui latihan aljabar,
-          geometri, aritmetika, grafik fungsi, dan pemecahan masalah
-          secara bertahap.
-        </p>
-        <p>Kerjakan langkah demi langkah, periksa kembali hasilnya, dan coba strategi lain untuk menemukan cara penyelesaian yang paling jelas.</p>
-      </article>
-
-    </div>
-  </main>
-
-  <footer>
-    <strong>MATH LAB</strong> · Interactive Learning
-  </footer>
+<footer>
+  <strong>KIMIA ORGANIK</strong> · Gugus Fungsi Amina
+</footer>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry Lab</title>
+  <title>Chemistry Lab - Materi Amina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
       color:#f5f5f5;
       min-height:100vh;
       background-color:#090909;
-      background-image:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),url("wallpaper-kimia.png");
+      background-image:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),url("wallpaper-kimia.png");
       background-size:cover,380px auto;
       background-position:center,top left;
       background-repeat:no-repeat,repeat;
@@ -27,14 +27,12 @@
 
     header{position:sticky;top:0;z-index:1000;background:rgba(9,10,16,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}
     .header-container{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
-    .logo-section{display:flex;align-items:center;gap:12px}
+    .logo-section{display:flex;align-items:center;gap:12px;text-decoration:none;}
     .phet-logo{font-size:32px;font-weight:900;letter-spacing:-1px;color:#f5f5ff}
     .cu-logo{font-size:11px;color:#b7bac8;border-left:1px solid rgba(255,255,255,.2);padding-left:10px;line-height:1.2}
     .nav-menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
-    .nav-menu a{color:#e8e8f0;transition:color .3s}
+    .nav-menu a{color:#e8e8f0;transition:color .3s;text-decoration:none;}
     .nav-menu a:hover{color:#16d9f5}
-    .donate-btn{border:1px solid #9a4dff;color:#d7b5ff!important;padding:8px 16px;border-radius:8px}
-    .donate-btn:hover{background:#8b35ff;color:#fff!important}
     .nav-icons{display:flex;align-items:center;gap:15px;font-size:18px;color:#e8e8f0;cursor:pointer}
 
     .hero{
@@ -65,7 +63,7 @@
       margin-bottom:22px
     }
 
-    .hero h1 span{color:#c9c9c9}
+    .hero h1 span{color:#16d9f5}
 
     .hero p{
       max-width:700px;
@@ -73,23 +71,6 @@
       line-height:1.9;
       color:#d0d0d0;
       margin-bottom:28px
-    }
-
-    .explore-button{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      padding:14px 23px;
-      border-radius:10px;
-      background:linear-gradient(100deg,#444,#aaa);
-      color:#fff;
-      font-weight:700;
-      transition:.25s
-    }
-
-    .explore-button:hover{
-      transform:translateY(-3px);
-      filter:brightness(1.15)
     }
 
     .section{
@@ -112,62 +93,51 @@
       font-size:14px
     }
 
-    .simulation-grid{
+    .materi-grid{
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:22px
+      grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+      gap:26px;
     }
 
-    .simulation-card{
+    .materi-card{
       display:flex;
       flex-direction:column;
       align-items:flex-start;
-      min-height:255px;
-      padding:27px;
+      padding:24px;
       border:1px solid rgba(255,255,255,.18);
       border-radius:18px;
       background:rgba(12,12,12,.88);
       box-shadow:0 12px 30px rgba(0,0,0,.2);
-      transition:transform .3s,border-color .3s
+      transition:transform .3s,border-color .3s;
     }
 
-    .simulation-card:hover{
+    .materi-card:hover{
       transform:translateY(-6px);
-      border-color:#ddd
+      border-color:#16d9f5;
     }
 
-    .simulation-icon{
-      width:52px;
-      height:52px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      background:rgba(255,255,255,.1);
-      color:#fff;
-      font-size:24px;
-      margin-bottom:22px
+    .materi-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
     }
 
-    .simulation-card h3{
+    .materi-card h3{
       font-size:19px;
-      margin-bottom:12px
+      margin-bottom:12px;
+      color: #fff;
     }
 
-    .simulation-card p{
+    .materi-card p{
       flex:1;
       font-size:14px;
       color:#c9c9c9;
-      line-height:1.8;
-      margin-bottom:22px
-    }
-
-    .simulation-link{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#eee;
-      font-weight:700;
-      font-size:13px
+      line-height:1.7;
+      margin-bottom:10px;
     }
 
     footer{
@@ -182,7 +152,6 @@
     footer strong{color:#eee}
 
     @media(max-width:900px){
-      .simulation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .hero{padding-top:65px}
     }
 
@@ -190,7 +159,7 @@
       .hero{padding:60px 20px 45px}
       .hero h1{font-size:42px}
       .section{padding:25px 20px 60px}
-      .simulation-grid{grid-template-columns:1fr}
+      .materi-grid{grid-template-columns:1fr}
       .section-heading h2{font-size:25px}
     }
 
@@ -205,16 +174,13 @@
 
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo-section">
+      <a href="#" class="logo-section">
         <div class="phet-logo">Amina</div>
         <div class="cu-logo">Aqmalgacor</div>
       </a>
       <nav class="nav-menu">
-        <a href="index.html#simulations">Simulations</a>
-        <a href="index.html#teaching">Teaching</a>
-        <a href="index.html#learn">About</a>
-        <a href="index.html#accessibility">Initiatives</a>
-        <a href="index.html#sponsors" class="donate-btn">Donate</a>
+        <a href="#materi">Materi</a>
+        <a href="#">Latihan Soal</a>
       </nav>
       <div class="nav-icons">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -225,103 +191,77 @@
 
   <section class="hero">
     <div class="tag">
-      <i class="fa-solid fa-circle"></i> INTERACTIVE LEARNING
+      <i class="fa-solid fa-flask"></i> KIMIA ORGANIK
     </div>
 
-    <h1>Explore <span>Chemistry</span></h1>
+    <h1>Materi Senyawa <span>Amina</span></h1>
 
     <p>
-      Pelajari dunia kimia melalui model atom, molekul, reaksi kimia,
-      larutan, dan skala pH. Kenali sifat materi serta perubahan
-      zat melalui konsep pembelajaran kimia yang menarik.
+      Pelajari struktur kimia, penggolongan, serta reaksi-reaksi pembentukan dari senyawa amina. Pahami bagaimana atom nitrogen mengikat berbagai gugus yang memengaruhi sifat senyawanya.
     </p>
-
-    <div class="explore-button">
-      Jelajahi Aktivitas
-      <i class="fa-solid fa-arrow-down"></i>
-    </div>
   </section>
 
-  <main class="section" id="simulations">
-
+  <main class="section" id="materi">
     <div class="section-heading">
-      <h2>Chemistry Simulations</h2>
-      <p>Pilih topik kimia yang ingin kamu pelajari.</p>
+      <h2>Struktur & Reaksi Amina</h2>
+      <p>Pelajari klasifikasi senyawa amina dan interaksinya dengan senyawa lain berdasarkan struktur molekulnya.</p>
     </div>
 
-    <div class="simulation-grid">
+    <div class="materi-grid">
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-atom"></i>
-        </div>
-        <h3>Build an Atom</h3>
-        <p>Susun proton, neutron, dan elektron untuk memahami struktur atom dan menentukan identitas suatu unsur.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 1: Klasifikasi Amina -->
+      <article class="materi-card">
+        <img src="img/1.png" alt="Klasifikasi Amina">
+        <h3>Klasifikasi Umum Amina</h3>
+        <p>Berdasarkan gugus tempat terikatnya amina, maka amina dapat dikelompokkan dalam alkil amina dan arilamina[cite: 2].</p>
+        <p>Amina diklasifikasikan berdasarkan jumlah substituen organik yang terikat pada nitrogen yaitu amina primer (R-NH2), amina sekunder (R2NH), dan amina tersier (R2N)[cite: 2].</p>
       </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-vial"></i>
-        </div>
-        <h3>Molecule Shapes</h3>
-        <p>Amati bentuk molekul dan hubungan antara pasangan elektron dengan geometri molekul.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 2: Amina Primer -->
+      <article class="materi-card">
+        <img src="img/2.png" alt="Amina Primer">
+        <h3>Amina Primer</h3>
+        <p>Amina primer adalah senyawa amina dimana nitrogen hanya mengikat satu gugus alkil atau aril[cite: 4].</p>
+        <p>Salah satu contoh dari amina primer adalah senyawa sikloheksilamina[cite: 4].</p>
       </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-flask"></i>
-        </div>
-        <h3>Balancing Chemical Equations</h3>
-        <p>Pelajari cara menyeimbangkan persamaan reaksi berdasarkan hukum kekekalan jumlah atom.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 3: Amina Sekunder -->
+      <article class="materi-card">
+        <img src="img/3.png" alt="Amina Sekunder">
+        <h3>Amina Sekunder</h3>
+        <p>Amina sekunder adalah senyawa amina dimana dua gugus alkil atau aril terikat pada atom nitrogen[cite: 3].</p>
+        <p>Contoh molekul yang tergolong sebagai amina sekunder adalah etil metil amina[cite: 3].</p>
       </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-droplet"></i>
-        </div>
-        <h3>Acid-Base Solutions</h3>
-        <p>Eksplorasi sifat asam dan basa, konsentrasi larutan, serta hubungan konsentrasi dengan nilai pH.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 4: Amina Tersier -->
+      <article class="materi-card">
+        <img src="img/4.png" alt="Amina Tersier">
+        <h3>Amina Tersier</h3>
+        <p>Amina tersier adalah senyawa amina yang terbentuk apabila pada atom nitrogen terikat 3 gugus alkil atau aril[cite: 5].</p>
+        <p>Sebagai contoh strukturnya, terdapat pada senyawa etil dimetil amina[cite: 5].</p>
       </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-cubes-stacked"></i>
-        </div>
-        <h3>Molarity</h3>
-        <p>Pelajari molaritas dengan mengamati pengaruh jumlah zat terlarut dan volume larutan.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 5: Reaksi Asam-Basa -->
+      <article class="materi-card">
+        <img src="img/5.png" alt="Reaksi Amina dengan Asam dan Air">
+        <h3>Reaksi Asam & Basa</h3>
+        <p>Amina dapat bereaksi dengan asam membentuk suatu garam alkil amonium halida[cite: 7]. Contohnya, dimetil amina berubah menjadi garam dimetil amonium klorida[cite: 7].</p>
+        <p>Amina dalam larutan air akan bersifat basa lemah karena akan menerima sebuah proton dari air, reaksi ini bersifat reversibel[cite: 7].</p>
       </article>
 
-      <article class="simulation-card">
-        <div class="simulation-icon">
-          <i class="fa-solid fa-atom"></i>
-        </div>
-        <h3>Browse Chemistry Sims</h3>
-        <p>Kenali konsep kimia lainnya, mulai dari struktur materi hingga reaksi dan sifat berbagai zat.</p>
-        <div class="simulation-link">
-          Buka Aktivitas <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      <!-- Kartu 6: Reaksi dengan Aldehid -->
+      <article class="materi-card">
+        <img src="img/6.png" alt="Reaksi Amina dengan Aldehid">
+        <h3>Reaksi dengan Aldehid</h3>
+        <p>Amina primer beraksi dengan aldehid menghasilkan enamina N-tersubstitusi[cite: 6].</p>
+        <p>Sementara itu, senyawa amina sekunder jika bereaksi dengan aldehid akan menghasilkan enamina (contohnya menghasilkan N-benzilidenametanamina)[cite: 6].</p>
       </article>
 
     </div>
   </main>
 
   <footer>
-    <strong>CHEMISTRY LAB</strong> · Interactive Learning
+    <strong>KIMIA ORGANIK</strong> · Karakteristik Senyawa Amina
   </footer>
 
 </body>
