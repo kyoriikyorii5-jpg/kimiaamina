@@ -127,16 +127,53 @@
       padding: 12px 18px;
       margin-bottom: 10px;
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.05);
-      cursor: default;
+      border: 1px solid rgba(255,255,255,.08);
+      cursor: pointer;
       display: flex;
       gap: 12px;
       line-height: 1.5;
+      transition: all 0.2s ease;
+    }
+
+    .options li:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.3);
     }
     
     .options li span.opt-letter {
       font-weight: bold;
       color: #999;
+    }
+
+    /* Style untuk status Jawaban (Benar / Salah / Terkunci) */
+    .options li.correct {
+      background: rgba(46, 204, 113, 0.2) !important;
+      border-color: #2ecc71 !important;
+      color: #ffffff !important;
+    }
+
+    .options li.correct span.opt-letter {
+      color: #2ecc71 !important;
+    }
+
+    .options li.wrong {
+      background: rgba(231, 76, 60, 0.2) !important;
+      border-color: #e74c3c !important;
+      color: #ffffff !important;
+    }
+
+    .options li.wrong span.opt-letter {
+      color: #e74c3c !important;
+    }
+
+    .options.disabled li {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .options.disabled li.correct,
+    .options.disabled li.wrong {
+      opacity: 1;
     }
 
     details.pembahasan {
@@ -257,12 +294,12 @@
         <br>
         Nama IUPAC yang benar untuk senyawa amina di atas adalah...
       </div>
-      <ul class="options">
-        <li><span class="opt-letter">A.</span> 2-metilpropilmetilamina</li>
-        <li><span class="opt-letter">B.</span> N,2-dimetilpropan-1-amina</li>
-        <li><span class="opt-letter">C.</span> N-metil-2-metilpropan-1-amina</li>
-        <li><span class="opt-letter">D.</span> 1-(metilamino)-2-metilpropana</li>
-        <li><span class="opt-letter">E.</span> Isopropilmetilamina</li>
+      <ul class="options" data-correct="C">
+        <li data-opt="A"><span class="opt-letter">A.</span> 2-metilpropilmetilamina</li>
+        <li data-opt="B"><span class="opt-letter">B.</span> N,2-dimetilpropan-1-amina</li>
+        <li data-opt="C"><span class="opt-letter">C.</span> N-metil-2-metilpropan-1-amina</li>
+        <li data-opt="D"><span class="opt-letter">D.</span> 1-(metilamino)-2-metilpropana</li>
+        <li data-opt="E"><span class="opt-letter">E.</span> Isopropilmetilamina</li>
       </ul>
 
       <details class="pembahasan">
@@ -291,12 +328,12 @@
         <br>
         Berdasarkan jumlah gugus alkil yang terikat pada atom N, senyawa tersebut tergolong sebagai...
       </div>
-      <ul class="options">
-        <li><span class="opt-letter">A.</span> Amina primer</li>
-        <li><span class="opt-letter">B.</span> Amina sekunder</li>
-        <li><span class="opt-letter">C.</span> Amina tersier</li>
-        <li><span class="opt-letter">D.</span> Amida</li>
-        <li><span class="opt-letter">E.</span> Asam amino</li>
+      <ul class="options" data-correct="B">
+        <li data-opt="A"><span class="opt-letter">A.</span> Amina primer</li>
+        <li data-opt="B"><span class="opt-letter">B.</span> Amina sekunder</li>
+        <li data-opt="C"><span class="opt-letter">C.</span> Amina tersier</li>
+        <li data-opt="D"><span class="opt-letter">D.</span> Amida</li>
+        <li data-opt="E"><span class="opt-letter">E.</span> Asam amino</li>
       </ul>
 
       <details class="pembahasan">
@@ -319,12 +356,12 @@
       <div class="question-text">
         Senyawa amina memiliki sifat khas dalam reaksi kimia karena memiliki pasangan elektron bebas pada atom Nitrogen (N). Sifat kimia khas dari senyawa amina tersebut adalah bersifat...
       </div>
-      <ul class="options">
-        <li><span class="opt-letter">A.</span> Asam kuat</li>
-        <li><span class="opt-letter">B.</span> Asam lemah</li>
-        <li><span class="opt-letter">C.</span> Basa</li>
-        <li><span class="opt-letter">D.</span> Netral</li>
-        <li><span class="opt-letter">E.</span> Garam</li>
+      <ul class="options" data-correct="C">
+        <li data-opt="A"><span class="opt-letter">A.</span> Asam kuat</li>
+        <li data-opt="B"><span class="opt-letter">B.</span> Asam lemah</li>
+        <li data-opt="C"><span class="opt-letter">C.</span> Basa</li>
+        <li data-opt="D"><span class="opt-letter">D.</span> Netral</li>
+        <li data-opt="E"><span class="opt-letter">E.</span> Garam</li>
       </ul>
 
       <details class="pembahasan">
@@ -342,6 +379,39 @@
   <footer>
     <strong>KIMIA ORGANIK</strong> · Latihan Soal Interaktif
   </footer>
+
+  <script>
+    document.querySelectorAll('.options').forEach(optionsContainer => {
+      const correctAnswer = optionsContainer.getAttribute('data-correct');
+      const items = optionsContainer.querySelectorAll('li');
+      const detailsEl = optionsContainer.closest('.question-card').querySelector('details.pembahasan');
+
+      items.forEach(item => {
+        item.addEventListener('click', function() {
+          if (optionsContainer.classList.contains('disabled')) return;
+
+          const selectedOption = this.getAttribute('data-opt');
+          
+          if (selectedOption === correctAnswer) {
+            this.classList.add('correct');
+          } else {
+            this.classList.add('wrong');
+            items.forEach(el => {
+              if (el.getAttribute('data-opt') === correctAnswer) {
+                el.classList.add('correct');
+              }
+            });
+          }
+
+          optionsContainer.classList.add('disabled');
+          
+          if (detailsEl) {
+            detailsEl.open = true;
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
